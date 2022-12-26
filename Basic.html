@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <style>
+    p {
+      color: blue;
+      color: black;
+      text-align: left;
+    }
+
+    /* p hocche selector ; color and test_align hocche property */
+
+    h3 {
+      color: blue;
+      text-align-last: left;
+      margin-left: 40px;
+    }
+
+    #parameter1 {
+      text-align: center;
+      color: green;
+    }
+
+    /* element( start tag + content + end tag  purata holo element like  <h3>joy</h3> eita full akta element ) 
+       element er specific id select korte #(id er name) use kora hoi */
+
+    .joy {
+      text-align-last: left;
+      color: brown;
+    }
+
+    h4.joy {
+      text-align-last: center;
+      color: blue;
+    }
+
+    /* html element er class select korty . class name use kora hoi  */
+
+    p.joy {
+      text-align: center;
+      color: brown;
+    }
+
+    /* text-align r text-align-last er majhe difference holo text align last er value e sob somoi set thakbe  */
+
+    p.adhikary {
+      font-size: 150%;
+    }
+
+    /* 
+    * {
+      text-align-last: right;
+      color: blue;
+    } */
+    /* * dile sob gula select hoye jabe  */
+
+    /* h3,h4,p {
+      text-align: center;
+      color: black;
+    } */
+    /* group kore o kora jai style  */
+
+    #p2 {
+      opacity: 0.3;
+      background-color: blue;
+    }
+
+    /* The opacity property specifies the opacity/transparency of an element. It can take a value from 0.0 - 1.0. The lower value, the more transparent: */
+    #p3 {
+      background: rgba(0, 128, 0, 0.6)
+    }
+
+
+    /* body {
+  background-color: #ffffff;
+  background-image: url("img_tree.png");
+  background-repeat: no-repeat;
+  background-position: right top;
+  }
+  eitar short from holo nicer eita 
+ body{
+  background: #ffffff url("img_tree.png") no-repeat right top;
+  background:color => bg image => bg repeat or not =>  attachment (scroll or fixed position img) => bg img position ; 
+} */
+
+
+    p.one {
+      border-style: solid;
+      border-color: blue red;
+      border-width: 10px 8px;
+    }
+    p.two {
+      border-style: solid;
+      border-color: red green blue black;
+      border-width: 16px 10px 6px 3px;
+    }
+
+
+  </style>
+</head>
+
+<body>
+  <h3>Hello JOY!</h3>
+  <p id="parameter1">Hello CSS!</p>
+  <p class="joy">this one is class type element</p>
+  <h4 class="joy">same class er majhe o style cng kora jai </h4>
+  <p class="joy adhikary">this one for multiple class style demo</p>
+  <!-- class joy theke color r align nibe r adhikary theke size nibe  -->
+  <p>These paragraphs are styled with CSS.</p>
+  <h1 style="border:2px solid Tomato;">Hello World</h1>
+  <!-- rhis is use in line css  -->
+  <p id="p2">this one is for optacity </p>
+  <p id="p3">this one is for optacity but using rgba last er value ta hocche optacity er jonno</p>
+  <p class="one">top-bottom left-right</p>
+  <p class="two">top right bottom left </p>
+</body>
+
+</html>
