@@ -1,15 +1,16 @@
+<!-- commenting style => comments are written in the top and then application of that comment -->
+
 <!DOCTYPE html>
 <html>
 
 <head>
   <style>
+    /* p hocche selector ; color and test_align hocche property */
     p {
       color: blue;
-      color: black;
+      color: red;
       text-align: left;
     }
-
-    /* p hocche selector ; color and test_align hocche property */
 
     h3 {
       color: blue;
@@ -17,58 +18,59 @@
       margin-left: 40px;
     }
 
+    /* element( start tag + content + end tag  purata holo element like  <h3>joy</h3> eita full akta element ) 
+    /* element er specific id select korte #(id er name) use kora hoi */
     #parameter1 {
       text-align: center;
       color: green;
     }
 
-    /* element( start tag + content + end tag  purata holo element like  <h3>joy</h3> eita full akta element ) 
-       element er specific id select korte #(id er name) use kora hoi */
-
+    /* html element er class select korty . class name use kora hoi  */
     .joy {
       text-align-last: left;
       color: brown;
     }
 
+    /* class er kono element select korty hole element_name.(dot)class_name */
     h4.joy {
       text-align-last: center;
       color: blue;
     }
 
-    /* html element er class select korty . class name use kora hoi  */
-
     p.joy {
+      /* The text-align-last property specifies how to align the last line of a text. */
       text-align: center;
-      color: brown;
+      color: purple;
     }
 
-    /* text-align r text-align-last er majhe difference holo text align last er value e sob somoi set thakbe  */
 
     p.adhikary {
       font-size: 150%;
+      /* text-align-last: center; */
+      /* eia dile text center a cole ashbe . karon joy theke text-align-last:left; set kora cilo akn text-align dile hbe nah , karon text-align-last mane jehetu last line so soto line er jonno eita count hobe  */
     }
 
-    /* 
-    * {
+    /* * dile sob gula select hoye jabe  */
+    /* * {
       text-align-last: right;
       color: blue;
     } */
-    /* * dile sob gula select hoye jabe  */
 
+    /* group kore o kora jai style  */
     /* h3,h4,p {
       text-align: center;
       color: black;
     } */
-    /* group kore o kora jai style  */
 
+
+    /* The opacity property specifies the opacity/transparency of an element. It can take a value from 0.0 - 1.0. The lower value, the more transparent: */
     #p2 {
       opacity: 0.3;
       background-color: blue;
     }
 
-    /* The opacity property specifies the opacity/transparency of an element. It can take a value from 0.0 - 1.0. The lower value, the more transparent: */
     #p3 {
-      background: rgba(0, 128, 0, 0.6)
+      background: rgba(7, 226, 7, 0.6)
     }
 
 
@@ -90,13 +92,97 @@
       border-color: blue red;
       border-width: 10px 8px;
     }
+
     p.two {
       border-style: solid;
       border-color: red green blue black;
       border-width: 16px 10px 6px 3px;
     }
 
+    p.three {
+      border-style: solid;
+      border-color: red green blue;
+      border-width: 16px 10px 6px;
+    }
 
+    p.round2 {
+      border: 2px solid blue;
+      /* border-radius mane holo border  curve kto tuku  */
+      border-radius: 4px;
+      /* padding holo car paser faka jaiga .mane text r box er majhe gap */
+      padding: 8px;
+    }
+
+    /* width & hight % er mane hocche oi block tar % hisabe ashbe . or in percent (%) of the containing block */
+    div {
+      border: 2px solid blue;
+      margin-top: 100px;
+      margin-bottom: 20px;
+      margin-right: 100px;
+      margin-left: 50px;
+      background-color: rgba(16, 211, 130, 0.641);
+      border-radius: 8px;
+      padding: 4px;
+    }
+
+    /* margin holo khatar margin er moto .. kto tuku jaiga faka rakhbo tar hisab */
+    /*  margin can be inherited from the parent element */
+    .div1 {
+      border: 2px solid red;
+      width: 300px;
+      /* margin auto te set korle eita horizontali center a cole ashe */
+      /* kintu jodi width set kora thake tahole 1st a oi width ta center a bosbe . thn remaining space half left r half right a jabe */
+      margin: auto;
+    }
+
+    .p4 {
+      /* justify dile akdom full line vore vore likha thake , doces er justify er moto  */
+      border: 2px solid blue;
+      text-align: center, justify;
+      padding: 25px 50px 25px 30px;
+    }
+
+    /* eita te width fix korsi 300 kintu actual hbe 300+25+25=350 cz width er songe left r right padding add hobe  */
+    /* The height and width properties do not include padding, borders, or margins. It sets the height/width of the area inside the padding, border, and margin of the element. */
+    .p5 {
+      /* Total element width = width + left padding + right padding + left border + right border + left margin + right margin */
+      width: 300px;
+      padding: 25px;
+      background-color: skyblue;
+    }
+
+    .p6 {
+      width: 300px;
+      padding: 25px;
+      box-sizing: border-box;
+      /* box-sizing: border-box use korar mane hocche akn padding soho width 300 hbe .. mane context-250 left -25 right-25 . total 300 */
+      background-color: skyblue;
+    }
+
+    .p7 {
+      /* ami jodi max-width set kore nah dei tahole jkn window soto korbo tkn scroll korty hobe jeita responsive nah  */
+      max-width: 400px;
+      height: 25px;
+      background-color: rgb(183, 231, 25);
+    }
+
+
+     /* Important one  */
+
+    .p8 {
+      text-align: justify;
+      text-justify: inter-word;
+      /* color diye text color bojhano hoi  */
+      color: blue;
+    }
+    .p9{
+      border: 2px solid blue;
+      outline: 2px solid red;
+      color: black;
+    }
+
+
+    
   </style>
 </head>
 
@@ -108,12 +194,28 @@
   <p class="joy adhikary">this one for multiple class style demo</p>
   <!-- class joy theke color r align nibe r adhikary theke size nibe  -->
   <p>These paragraphs are styled with CSS.</p>
-  <h1 style="border:2px solid Tomato;">Hello World</h1>
-  <!-- rhis is use in line css  -->
+  <h1 style="border:2px solid blueviolet;">Hello World</h1>
   <p id="p2">this one is for optacity </p>
   <p id="p3">this one is for optacity but using rgba last er value ta hocche optacity er jonno</p>
-  <p class="one">top-bottom left-right</p>
-  <p class="two">top right bottom left </p>
-</body>
+  <p class="one">TopBottom LeftRight</p>
+  <p class="two">Top Right Bottom Left </p>
+  <p class="three">Top RightLeft Bottom </p>
+  <p class="round2">Rounder border korte border-radius use kora hoi .. joto besi px joto besi curve</p>
+  <div>
+    This div element has a top margin of 100px, a right margin of 150px, a bottom margin of 100px, and a left margin of
+    80 .
+  </div>
+  <p class="div1">this one is center aligned</p>
+  <p class="p4">(likha boro hole padding er actule effect bojha jai )padding example top is 25 right is 50 bottom is 75
+    and left is 100 </p>
+  <p class="p5">box width 350 total ( 300 + 25 + 25 ) </p>
+  <p class="p6">box width 300 total (250 + 25 + 25 ) </p>
+  <p class="p7">window size komaile er impact bojha jabe .</p>
+  <p class="p8">text-align: justify dile sundor moto align kore dei kintu , jodi r o sundore kore word gular majher
+    space justify korty cai tkn text-justify: inter-word option lage </p>
+  <p class="p9">out line basically just border er upr akta extra layer ..</p>
+
+
+  </body>
 
 </html>
