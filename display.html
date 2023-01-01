@@ -1,0 +1,86 @@
+<!-- commenting style => comments are written in the top and then application of that comment -->
+
+
+<!DOCTYPE html>
+<html>
+
+<head>
+    <style>
+        #one {
+            text-align: center;
+            color: blue;
+            border: 2px solid red;
+            max-width: 500px;
+        }
+
+        .hidden {
+            display: none;
+            color: red;
+        }
+
+        /* #myBtn{
+            border: 2px solid blue;
+            border-radius: 4px;
+        } */
+
+        /* block size er gula full width nei .. jmn div,h1..h6,p,from,header, footer , section */
+        /* in line er gula just or jaiga tuku nei .. jmn span , a , img */
+
+        span.a {
+            display: inline;
+            /* the default for span */
+            width: 100px;
+            height: 100px;
+            padding: 5px;
+            border: 1px solid blue;
+            background-color: yellow;
+        }
+
+        span.b {
+            display: inline-block;
+            /* inlineblock a inline er majhe custom width hight use kora jai   */
+            width: 100px;
+            height: 100px;
+            padding: 5px;
+            border: 1px solid blue;
+            background-color: yellow;
+        }
+
+        span.c {
+            display: block;
+            width: 100px;
+            height: 100px;
+            padding: 5px;
+            border: 1px solid blue;
+            background-color: yellow;
+        }
+    </style>
+</head>
+
+<body>
+
+    <h1 id="one">This is a visible heading. ei jaigai display use kora hoi nai </h1>
+    <h1 class="hidden">This is a hidden heading</h1>
+    <button type="button" id="myBtn">Try it</button>
+    <p>Notice that the h1 element with display: none; does not take up any space.</p>
+
+    
+<h1>The display Property</h1>
+
+<h2>display: inline</h2>
+<div>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum consequat scelerisque elit sit amet consequat. Aliquam erat volutpat. <span class="a">Aliquam</span> <span class="a">venenatis</span> gravida nisl sit amet facilisis. Nullam cursus fermentum velit sed laoreet. </div>
+
+<h2>display: inline-block</h2>
+<div>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum consequat scelerisque elit sit amet consequat. Aliquam erat volutpat. <span class="b">Aliquam</span> <span class="b">venenatis</span> gravida nisl sit amet facilisis. Nullam cursus fermentum velit sed laoreet. </div>
+
+<h2>display: block</h2>
+<div>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum consequat scelerisque elit sit amet consequat. Aliquam erat volutpat. <span class="c">Aliquam</span> <span class="c">venenatis</span> gravida nisl sit amet facilisis. Nullam cursus fermentum velit sed laoreet. </div>
+   
+   <script>
+        document.getElementById("myBtn").onclick = () =>{
+            document.getElementsByClass("hidden").style.display = "block";
+        }
+    </script>
+</body>
+
+</html>

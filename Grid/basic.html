@@ -1,0 +1,90 @@
+<html>
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Grid Basic </title>
+    <style>
+
+        /* justify-content / align-content mane holo amra container niye kaj kortyci so sob div akn eitar content  */
+
+        body {
+            margin: 10px;
+            height: 100vh;
+            background-color: bisque;
+        }
+
+        .container {
+            /* height: 100px; */
+            height: 100px;
+            display: grid;
+            grid-gap: 4px;
+            /* grid-template-colums er mane holo kto gula columns thakbe.. ei jaigai repeat er 1st parameter holo kto bar thakbe , 2nd ta holo kto fraction kore thakbe  */
+            grid-template-columns: repeat(5, 90px);
+            /* grid-template-rows er mane holo kto gula rows thakbe.. ei jaigai repeat er 1st parameter holo kto gula row thakbe , 2nd ta holo kto fraction ( vag akare ) kore thakbe  */
+            grid-template-rows: repeat((2, 90px));
+            /* conatiner er majhe box gula ke horaizontally kivabe thkbe seita thik kore dei justify-content */
+            justify-content: center;
+            /* align-content: center; */
+
+            /* cantainer er majhe box => box er majhe likha gula kivabe thakbe  */
+            /* justify-items: center; */
+        }
+
+        .container>div {
+
+            /* full container er majhe onk gula div ashe .. oi akta div er property set kortyce  */
+
+            /*  display grid mane holo eita akn grid er property follow korbe  */
+            display: grid;
+            /* box gular majhe likha gula ke kivabe sajabe horaizontally mane width borabor ba row borabor  */
+            justify-content: center;
+            /* box gular majhe likha gula ke kivabe sajabe vartically mane height borabor ba coloum borabor  */
+            align-content: center;
+
+            color: white;
+        }
+
+        .container>div:nth-child(1n) {
+            background-color: red;
+        }
+
+        .container>div:nth-child(2n) {
+            background-color: #ef476f;
+        }
+
+        .container>div:nth-child(3n) {
+            background-color: blue;
+        }
+
+        .container>div:nth-child(4n) {
+            background-color: #06d6a0;
+        }
+
+        .container>div:nth-child(5n) {
+            background-color: purple;
+        }
+
+    </style>
+
+</head>
+
+<body>
+
+    <div class="container">
+        <div> 1 2 4 5 7</div>
+        <div>2</div>
+        <div>3</div>
+        <div>4</div>
+        <div>5</div>
+        <div>6</div>
+        <div>7</div>
+        <div>8</div>
+        <div>9</div>
+        <div>10</div>
+    </div>
+
+</body>
+
+</html>

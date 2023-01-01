@@ -1,0 +1,95 @@
+<html>
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Grid Advance</title>
+    <style>
+        /* sob somoi console a dekhbo tahole actual idea pauya jabe  */
+
+        .container {
+
+            display: grid;
+            padding: 2px;
+            margin: 4px;
+            /* height nah dile eita sudu matro akta block nibe mane display er majhe olpo jaiga nibe  */
+            height: 100%;
+            background-color: #2196F3;
+            grid-gap: 4px;
+            /* fr mne fractional resio  */
+            grid-template-columns: repeat(3, 1fr);
+            grid-template-rows: repeat(3, 1fr);
+            
+            /* akn nicer akta 6 num oita bad porse karon ami bolci row 3 ta hbe kintu ei jaigai row 4 ta . akn eitar o property set kora jai  */
+            /* eita baki row gula ke 1fr jaiga dibe  */
+
+            grid-auto-rows: 1fr;
+            /* accha akn responsive korar jonno repeat er majhe fixed value nah diye akta automatic fit kore dite pari  */
+
+            /* kintu prob hocche 90 er age pojontho blank space thakbe eita thik korty minmax use korbo  */
+            /* grid-template-columns: repeat(auto-fit,90px); */
+         
+            /* grid-template-columns: repeat(auto-fit, minmax(90px, 1fr)); */
+
+            /* display size soto krole bujhty parba  */
+           
+            
+
+           /* The justify-content property is used to align the whole grid inside the container. */
+           /* The align-content property is used to vertically align the whole grid inside the container. */
+
+
+
+            /* console on kore dekho  */
+
+
+            /* justify-items: left; */
+            /* justify-items: right; */
+            /* justify-items: center; */
+            
+            /* align-items: center; */
+            /* align-items:start; */
+            /* align-items: end; */
+
+        }
+
+        .container>div {
+            display: grid;
+            background-color: rgba(255, 255, 255, 0.8);
+            justify-content: center;
+            align-items: center;
+        }
+
+        .one {
+            grid-column-start: 1;
+            grid-column-end: 3;
+            /* 2 tai same  */
+            /* grid-column: 1/3; */
+            grid-row: 1/3;
+            /* akdom last er ta ke -1 bole  */
+
+        }
+
+        .two {
+            grid-column: 3/4;
+            grid-row: 1/3;
+        }
+    </style>
+
+</head>
+
+<body>
+
+    <div class="container">
+        <div class="one">1</div>
+        <div class="two">2</div>
+        <div class="three">3</div>
+        <div class="four">4</div>
+        <div class="five">5</div>
+        <div class="six">6</div>
+    </div>
+
+</body>
+
+</html>
