@@ -17,17 +17,17 @@
 
         .container {
             /* height: 100px; */
-            height: 100px;
+            height: 300px;
             display: grid;
             grid-gap: 4px;
             /* grid-template-colums er mane holo kto gula columns thakbe.. ei jaigai repeat er 1st parameter holo kto bar thakbe , 2nd ta holo kto fraction kore thakbe  */
             grid-template-columns: repeat(5, 90px);
             /* grid-template-rows er mane holo kto gula rows thakbe.. ei jaigai repeat er 1st parameter holo kto gula row thakbe , 2nd ta holo kto fraction ( vag akare ) kore thakbe  */
-            grid-template-rows: repeat((2, 90px));
+            grid-template-rows: repeat((3, 90px));
             /* conatiner er majhe box gula ke horaizontally kivabe thkbe seita thik kore dei justify-content */
             justify-content: center;
             /* align-content: center; */
-
+            background-color: #06d6a0;
             /* cantainer er majhe box => box er majhe likha gula kivabe thakbe  */
             /* justify-items: center; */
         }
@@ -42,7 +42,6 @@
             justify-content: center;
             /* box gular majhe likha gula ke kivabe sajabe vartically mane height borabor ba coloum borabor  */
             align-content: center;
-
             color: white;
         }
 
@@ -59,11 +58,14 @@
         }
 
         .container>div:nth-child(4n) {
-            background-color: #06d6a0;
+            background-color: #d606c5;
         }
 
         .container>div:nth-child(5n) {
             background-color: purple;
+        }
+        .one{
+            grid-row: 1/3;
         }
 
     </style>
@@ -73,7 +75,7 @@
 <body>
 
     <div class="container">
-        <div> 1 2 4 5 7</div>
+        <div class="one"> 1 2 4 5 7</div>
         <div>2</div>
         <div>3</div>
         <div>4</div>
@@ -83,6 +85,9 @@
         <div>8</div>
         <div>9</div>
         <div>10</div>
+        <div>11</div>
+        <div>12</div>
+        <div>13</div>
     </div>
 
 </body>
