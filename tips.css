@@ -1,0 +1,37 @@
+
+most of the time use 
+
+element.class	p.intro	Selects all <p> elements with class="intro"
+
+element,element	div, p	Selects all <div> elements and all <p> elements
+
+element element	div p	Selects all <p> elements inside <div> elements
+
+.class element .joy h4 selects all h4 elemetns inside class joy.
+
+element>element	div > p	Selects all <p> elements where the parent is a <div> element
+
+
+
+
+
+
+.class1.class2	.name1.name2	Selects all elements with both name1 and name2 class .
+
+.class1 .class2	.name1 .name2	Selects all elements with name2 that is a child of an element with name1 ( .class space .class )
+
+:active	a:active	Selects the active link
+
+::after	p::after	Insert something after the content of each <p> element
+
+::before	p::before	Insert something before the content of each <p> element
+
+:nth-child(n)	p:nth-child(2)	Selects every <p> element that is the second child of its parent
+
+:nth-last-child(n)	p:nth-last-child(2)	Selects every <p> element that is the second child of its parent, counting from the last child
+
+:nth-last-of-type(n)	p:nth-last-of-type(2)	Selects every <p> element that is the second <p> element of its parent, counting from the last child
+
+:nth-of-type(n)	p:nth-of-type(2)	Selects every <p> element that is the second <p> element of its parent
+
+:only-of-type	p:only-of-type	Selects every <p> element that is the only <p> element of its parent
