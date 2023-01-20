@@ -8,9 +8,9 @@ flex-flow  => The flex-flow property is a shorthand property for setting both th
 
 justify-content => container er majhe horaizontally justify kora .flex-start,flex-end,center;
 
-align-items => div gular majher property ke vartically align kora . like column borabor .
+align-items => div gular majher property ke akta row dore vartically align kora . mane joto gula row thakbe toto gula ke dore align korbe . ( Control the vertical alignment of single rows of flex items )
 
-align-content => container re property div gula ke vartically align kora . like column borabor .
+align-content => container er property , div gula ke vartically align kora .It is similar to align-items, but instead of aligning flex items, it aligns flex lines. sob gula item ke akbar a niye then align korbe ..
 
 songe content thaklei bujhba oita container er jonno , r item tka mane akta specific item er jonno 
 
@@ -25,6 +25,23 @@ songe content thaklei bujhba oita container er jonno , r item tka mane akta spec
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Flex-box Advance</title>
     <style>
+     .flex-container {
+  display: flex;
+  height: 600px;
+  flex-wrap:wrap;
+  align-items: end;
+  background-color: DodgerBlue;
+}
+
+.flex-container > div {
+  background-color: #f1f1f1;
+  width: 100px;
+  margin: 10px;
+  text-align: center;
+  line-height: 75px;
+  font-size: 30px;
+}
+     
         .container {
             display: flex;
             background-color: antiquewhite;
@@ -126,7 +143,23 @@ songe content thaklei bujhba oita container er jonno , r item tka mane akta spec
        <div style="align-self: flex-end">7</div>
 
     </div>
+       
+ 
+ <h1>The align-items Property</h1>
 
+<p>The "align-items: center;" aligns the flex items in the middle of the container:  akta row er moto kore nibe </p>
+
+<div class="flex-container">
+  <div>1</div>
+  <div>2</div>
+  <div>3</div>
+    <div>1</div>
+  <div>2</div>
+  <div>3</div> 
+    <div>1</div>
+  <div>2</div>
+  <div>3</div> 
+</div>
 
 </body>
 
