@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tips</title>
+
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        /* tips 1  */
+
+        .even-column {
+            display: flex;
+            gap: 3px;
+            text-align: center;
+            background-color: burlywood;
+            border: 3px solid black;
+        }
+
+        .even-column>* {
+            /* flex-basis: 100%; */
+            flex: 1;
+            border: 3px solid blue
+        }
+
+        /* tips 1.1  */
+
+        .even-column {
+            display: flex;
+            width: 300px;
+            text-align: center;
+            background-color: burlywood;
+            border: 3px solid black;
+        }
+
+        .even-column>* {
+            /* flex shrink=0 that means off ashe  */
+            flex: 1 0 100%;
+            border: 3px solid blue
+        }
+
+        .even-column>* {
+            /* 1st a ami flex-grow off kore rakshi ajonno flex-basis er size tai dicche , 2nd time jei ami grow on kore dibo tkn empth space ta soman vag a vag kore dibe  */
+            flex: 0 0 50px;
+            /* flex-grow: 1; */
+        }
+
+        /* tips 2  */
+
+        .responsive_layout {
+            display: flex;
+            flex-wrap: wrap;
+            background-color: burlywood;
+            border: 3px solid black;
+            text-align: center;
+        }
+
+        .responsive_layout>* {
+            /* flex shrink on ba off raklau kono impact porbe nah karon wrap on kora je . ( shrink er ei concept ta bujhar jonno just 0 0 10em kore dilei bojha jabe je ashole warp er kaj hocche ) */
+            flex: 1 1 10em;
+            border: 3px solid blue;
+        }
+
+        .column {
+            display: flex;
+            text-align: center;
+            flex-wrap: wrap;
+            background-color: burlywood;
+            border: 3px solid black;
+        }
+
+        .column>* {
+            border: 3px solid blue;
+            flex-grow: 1;
+            height: 50px;
+            flex-basis: 30%;
+        }
+
+        @media only screen and (max-width: 500px) {
+            .column>* {
+                flex-basis: 100%;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <!-- tips 1  -->
+
+    <!-- flex iteam a equal column caile just flex 1 kore or flex-basis=100% kore dite hobe . flexbasis a je width ta dei seitai 1st a asign kore then 2 ta kaj hoi 
+        1. jodi item gular total size parent theke boro hoye jai then => oitake equal ration te shrink ( soto ) kore dei flex shrink .
+        2. jodi item gular total size parent theke soto hoye jai then => oitake equal ration grow ( boro ) kore dei flex grow .
+       for demo run tips : 1.1 . so deklam je shrink off thakle width hoye jai flex-basis er ta -->
+
+    <!-- <div class="even-column">
+        <div class="col">1</div>
+        <div class="col">2</div>
+        <div class="col">3</div>
+        <div class="col">4</div>
+    </div> -->
+
+    <!-- Tips 2  -->
+
+    <!-- so flex-basis ke use kore media query sara e layout change kora jai jmn eita 
+            ami flex-basis a akta size diye dice and wrap on kore dice . so oisize nah pele itam nice cole ashbe . kintu grow on kora so total iteam size content size thke soto hoye gelau oi ration te boro hobe . 
+      -->
+    <!-- <div class="responsive_layout">
+        <div class="col">1</div>
+        <div class="col">2</div>
+        <div class="col">3</div>
+        <div class="col">4</div>
+        <div class="col">5</div>
+    </div> -->
+
+    <!-- tips 3  -->
+
+    <!-- maintain column in flexbox  -->
+
+    <div class="column">
+        <div class="col">1</div>
+        <div class="col">2</div>
+        <div class="col">3</div>
+        <div class="col">4</div>
+        <div class="col">5</div>
+    </div>
+</body>
+
+</html>

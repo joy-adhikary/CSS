@@ -1,13 +1,28 @@
 <html>
 
+
+<!-- 
+
+          flexbox e align-items a ak akta row ke , ak akta item hisabe dore jmn ei example a flexbox a item sonkha 2 ta but grid a 12 ta 
+          1  2  3 4  5  6       => item 1 
+          7  8  9 10 11 12      => item 2 
+          kintu grid a ak akta element itself ak akta item .So  
+          grid a align-items / justify-items mane holo element gula oi box er majhe kivabe move korbe.akta element er oi box tuku e or moving space 
+
+          
+
+        -->
+
+<!-- 
+    Grid a align-items / justify-items by default stretch thake . 
+ -->
 <head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Grid Basic </title>
     <style>
-
-        /* justify-content / align-content mane holo amra container niye kaj kortyci so sob div akn eitar content  */
+        /* justify-content / align-content mane holo amra container niye kaj kortyci so sob div akn eitar content  , akn amra full group of div ke dore then justify or align korbo . */
 
         body {
             margin: 10px;
@@ -28,7 +43,7 @@
             justify-content: center;
             /* align-content: center; */
             background-color: #06d6a0;
-            /* cantainer er majhe box => box er majhe likha gula kivabe thakbe  */
+            /* cantainer er majhe box => soto soto box or items er majher content ( in that case number ) gula kivabe thakbe  */
             /* justify-items: center; */
         }
 
@@ -64,10 +79,13 @@
         .container>div:nth-child(5n) {
             background-color: purple;
         }
-        .one{
-            grid-row: 1/3;
-        }
 
+        .one {
+            grid-row: 1/3;
+            /* grid-column: 1/-1; */
+            grid-column: 1/6;
+            /* 1/-1 and  1/6 both are same .Both one basically pointing to the end column number*/
+        }
     </style>
 
 </head>
@@ -76,7 +94,11 @@
 
     <div class="container">
         <div class="one"> 1 2 4 5 7</div>
-        <div>2</div>
+        <div>
+            2
+            <!-- <div>2</div>
+            <div>2</div> -->
+        </div>
         <div>3</div>
         <div>4</div>
         <div>5</div>

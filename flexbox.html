@@ -1,116 +1,211 @@
+
+
 <!-- 
 
+*** Flexbox a justify-items / justify-self nai eitar bodole margin:auto use kore . 
+
+*** justify content / align content  jkn 2 ta row thakbe tkn kaj korbe .. kintu jodi akta row te kaj koraity cai tahole amake flex-wrap : wrap use korty hobe .
+
 flex-direction => container er kon dike div/child gula ke rakhbe ba spand korbe like x axis naki y axis 
+
+flex-direction => column , jodi flex-direction = column hoi, tkn justify hoye jai align r align hoye jai justify 
 
 flex-wrap  => wrap nah dile div gula caipe ak row te fit hoye jai . kintu wrap dile nijeder size niye set kore then display soto boro hole warp kore 
 
 flex-flow  => The flex-flow property is a shorthand property for setting both the flex-direction and flex-wrap properties.
 
-justify-content => container er majhe horaizontally justify kora .flex-start,flex-end,center;
+justify-content => container er majhe sob gula iteam ke akbar a horaizontally ( x axis ) justify kora .
 
-align-items => div gular majher property ke akta row dore vartically align kora . mane joto gula row thakbe toto gula ke dore align korbe . ( Control the vertical alignment of single rows of flex items )
+align-items => Container er majher row gula ke akta akta item dorbe . 5 ta row thakle 5 ta iteams hbe . ebar ei row gula ke vartically ( y axis ) align kore . mane joto gula row thakbe toto gula iteam ke dore align korbe . ( Control the vertical alignment of single rows of flex items )
 
-align-content => container er property , div gula ke vartically align kora .It is similar to align-items, but instead of aligning flex items, it aligns flex lines. sob gula item ke akbar a niye then align korbe ..
+align-content => container er property , Sob gula div ke akbar a dore vartically align korbe . sob gula item ke akbar a niye then align korbe ..
 
 songe content thaklei bujhba oita container er jonno , r item tka mane akta specific item er jonno 
 
- -->
+justify sob somoi main axis ( x axis ) borabor kaj kore kintu align sob somoi cross axis  ( y axis ) borabor kaj kore . 
+
+jkn amra flex-direction: row dei tkn row borabor items gula assign hoi . that means main axis ( x axis ) borabor. ( → this way )
+akn ami jodi justify use kori tahole eita left-right ( main axis => x axis ) borabor format korbe r align use korle eita top-bottom ( cross axis => y axis ) borabor format korbe. 
+
+But jodi amra flex-direction: column dei tkn column borabor items gula assign hoi . that means main cross axis borabor. ( ↓ this way )
+akn ami jodi justify use kori tahole eita top-bottom ( cross axis =>  y axis )  borabor format korbe r align use korle eita left-right ( main axis => x axis  ) borabor format korbe . that means 
+jodi ami flex-direction: column use kori tahole justify hoye jabe align r align hoye jabe justify . 
+
+
+-->
+
+
 
 <!DOCTYPE html>
 <html>
-
-<head>
+  <head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Flex-box Advance</title>
     <style>
-     .flex-container {
-  display: flex;
-  height: 600px;
-  flex-wrap:wrap;
-  align-items: end;
-  background-color: DodgerBlue;
-}
+      .container1 {
+        display: flex;
+        background-color: aqua;
+        flex-wrap: wrap;
+        height: 300px;
+      }
+      .container1 > div {
+        background-color: red;
+        width: 100px;
+        height: 100px;
+        text-align: center;
+        color: wheat;
+        line-height: 100px;
+        font-size: 30px;
+        margin: 10px;
+      }
 
-.flex-container > div {
-  background-color: #f1f1f1;
-  width: 100px;
-  margin: 10px;
-  text-align: center;
-  line-height: 75px;
-  font-size: 30px;
-}
-     
-        .container {
-            display: flex;
-            background-color: antiquewhite;
-            margin: 5px;
-            padding: 4px;
+      .flex-container {
+        display: flex;
+        height: 600px;
+        flex-wrap: wrap;
+        align-items: end;
+        background-color: DodgerBlue;
+      }
 
-            /* wrap nah dile div gula caipe ak row te fit hoye jai . kintu wrap dile nijeder size niye set kore then display soto boro hole warp kore  */
-            /* flex-wrap: wrap; */
+      .flex-container > div {
+        background-color: #f1f1f1;
+        width: 100px;
+        margin: 10px;
+        text-align: center;
+        line-height: 75px;
+        font-size: 30px;
+      }
+
+      .container {
+        display: flex;
+        background-color: antiquewhite;
+        margin: 5px;
+        padding: 4px;
+
+        /* wrap nah dile div gula caipe ak row te fit hoye jai . kintu wrap dile nijeder size niye set kore then display soto boro hole warp kore  */
+        /* flex-wrap: wrap; */
+
+        /* justify-content: flex-start; */
+        /* justify-content: flex-end; */
+
+        /* flex-derection:column dile y axix r row dile by default er moto x axis */
+        /* flex-direction: column-reverse; */
+        /* flex-direction:column; */
+
+        /* flex-derection + flex-wrap */
+        flex-flow: row wrap;
+      }
+
+      .container > div {
+        background-color: aquamarine;
+        width: 100px;
+        line-height: 100px;
+        margin: 5px;
+        text-align: center;
+      }
+
+      .flex-con {
+        display: flex;
+        height: 300px;
+        /* align-items: stretch; */
+        background-color: chartreuse;
+      }
+
+      .flex-con > div {
+        background-color: DodgerBlue;
+        color: white;
+        height: 100px;
+        width: 80px;
+        margin: 10px;
+        text-align: center;
+        line-height: 75px;
+        font-size: 30px;
+      }
+
+      .flex_direction_row {
+        display: flex;
+        flex-direction: row;
+        height: 400px;
+        align-items: center;
+        justify-content: flex-end;
+        background-color: cyan;
+      }
+      .flex_direction_row > div {
+        background-color: #f1f1f1;
+        width: 100px;
+        margin: 10px;
+        text-align: center;
+        line-height: 75px;
+        font-size: 30px;
+      }
 
 
-            /* justify-content: flex-start; */
-            /* justify-content: flex-end; */
-
-
-            /* flex-derection:column dile y axix r row dile by default er moto x axis */
-            /* flex-direction: column-reverse; */
-            /* flex-direction:column; */
-
-
-            /* flex-derection + flex-wrap */
-            flex-flow: row wrap;
-        }
-
-        .container>div {
-            background-color: aquamarine;
-            width: 100px;
-            line-height: 100px;
-            margin: 5px;
-            text-align: center;
-        }
-
-        .flex-con {
-            display: flex;
-            height: 300px;
-            /* align-items: stretch; */
-            background-color: chartreuse;
-        }
-
-        .flex-con>div {
-            background-color: DodgerBlue;
-            color: white;
-            height: 100px;
-            width: 80px;
-            margin: 10px;
-            text-align: center;
-            line-height: 75px;
-            font-size: 30px;
-        }
+      .flex_direction_column {
+        display: flex;
+        flex-direction: column;
+        height: 400px;
+        align-items: center;
+        justify-content: flex-end;
+        /* justify-items: center; */
+        background-color: DodgerBlue;
+      }
+      .flex_direction_column > div {
+        background-color: #f1f1f1;
+        width: 100px;
+        margin: 10px;
+        text-align: center;
+        line-height: 75px;
+        font-size: 30px;
+      }
 
     </style>
+  </head>
 
-</head>
-
-<body>
-
+  <body>
     <div class="container">
-        <div class="one">1</div>
-        <div class="two">2</div>
-        <div class="three">3</div>
-        <div class="four">4</div>
-        <div class="five">5</div>
-        <div class="six">6</div>
-        <div>7</div>
-        <div>8</div>
-        <div>9</div>
-        <div>10</div>
-        <div>11</div>
+      <div class="one">1</div>
+      <div class="two">2</div>
+      <div class="three">3</div>
+      <div class="four">4</div>
+      <div class="five">5</div>
+      <div class="six">6</div>
+      <div>7</div>
+      <div>8</div>
+      <div>9</div>
+      <div>10</div>
+      <div>11</div>
+    </div>
 
 
+
+<!--           This one is Very Very Important For flexbox modeling  
+
+  justify sob somoi main axis ( x axis ) borabor kaj kore kintu align sob somoi cross axis  ( y axis ) borabor kaj kore . 
+  jkn amra flex-direction: row dei tkn row borabor items gula assign hoi . that means main axis ( x axis ) borabor. ( → this way )
+  akn ami jodi justify use kori tahole eita left-right ( main axis => x axis ) borabor format korbe r align use korle eita top-bottom ( cross axis => y axis ) borabor format korbe. 
+
+  but jodi amra flex-direction: column dei tkn column borabor items gula assign hoi . that means main cross axis borabor. ( ↓ this way )
+  akn ami jodi justify use kori tahole eita top-bottom ( cross axis =>  y axis )  borabor format korbe r align use korle eita left-right ( main axis => x axis  ) borabor format korbe . that means 
+  jodi ami flex-direction: column use kori tahole justify hoye jabe align r align hoye jabe justify . 
+
+-->
+
+    <!-- this one for flex direction row  -->
+    
+      <div class="flex_direction_row">
+      <div>1</div>
+      <div>2</div>
+      <div>3</div>
+    </div>
+
+    <!-- this one for flex direction column -->
+
+    <div class="flex_direction_column">
+      <div>1</div>
+      <div>2</div>
+      <div>3</div>
     </div>
 
     <!--     
@@ -125,42 +220,47 @@ songe content thaklei bujhba oita container er jonno , r item tka mane akta spec
 
     </div> -->
 
-    <p>flex-grow mane kon coloum ke kto fr value dibo </p>
+    <p>flex-grow mane kon coloum ke kto fr value dibo</p>
+
+<!-- flex grow holo amr je extra space tuku thakbe oi space take  , ke kto tuku nibe . sobar grow 1 dile sobai same vabe barbe . lets say , element 5 ta  tar majhe 2 tar grow 2 and baki 3 tar 1 . Jodi 20px baki thake tahole 3 ta pabe 4px kore r baki 2 ta pabe 8px kore -->
 
     <div class="flex-con">
-        <div style="flex-grow: 3">1</div>
-        <div style="flex-grow: 1">2</div>
-        <div style="flex-grow: 1">3</div>
+      <div style="flex-grow: 3">1</div>
+      <div style="flex-grow: 1">2</div>
+      <div style="flex-grow: 1">3</div>
 
-        <!-- Do not let the third flex item shrink as much as the other flex items: -->
-        <div style="flex-shrink: 0">4 </div>
+      <!-- shrink er value jodi 0 thake tahole oita shrink korbe nah i mean fixed width thakbe . Shrink er value 1 hole shrink hobe .
+          Here flex-shrink:0 do not let the third flex item shrink as much as the other flex items: -->
 
-        <!-- flex-besis mane ami akta div er width er value (200 )set kore dibo . akn style a onno value(100) set kora thakleu basis er tai count hbe  -->
-       <div style="flex-basis: 200px;">5</div>
+      <div style="flex-shrink: 0">4</div>
 
-       <!-- align-self mane holo oi item ta sudu matro nijer moto kore set hbe like style theke sob gula  center kora thakleu ei 2 ta end r start hbe karon inline style kora-->
-       <div style="align-self: flex-start">6</div>
-       <div style="align-self: flex-end">7</div>
+      <!-- flex-besis hocche min-width er moto onk ta kintu jkn amr min-width theke o sto display size hbe tkn min-width a overflow hoye jabe kintu flex-basis a seita hoi nah .Flex-basis a joto soto e kori nah kno min-centent pojontho resposive rakhbe . 
+          min-content mane akdom last word er size pojntho . ( jodi onk gula word thake tkn wrap hoite hoite last small word er pore giye r responsive thakbe nah eitai min-content ) .Flex-basis overflow hoitei dibe nah -->
+      <div style="flex-basis: 200px">5</div>
 
+      <!-- align-self mane holo oi item ta sudu matro nijer moto kore set hbe like style theke sob gula  center kora thakleu ei 2 ta end r start hbe karon inline style kora-->
+      <div style="align-self: flex-start">6</div>
+      <div style="align-self: flex-end">7</div>
     </div>
-       
- 
- <h1>The align-items Property</h1>
 
-<p>The "align-items: center;" aligns the flex items in the middle of the container:  akta row er moto kore nibe </p>
+    <h1>The align-items Property</h1>
 
-<div class="flex-container">
-  <div>1</div>
-  <div>2</div>
-  <div>3</div>
-    <div>1</div>
-  <div>2</div>
-  <div>3</div> 
-    <div>1</div>
-  <div>2</div>
-  <div>3</div> 
-</div>
+    <p>
+      The "align-self: flex item nijeder ke align korbe . eita specific akta akta item ke dore align kore .
+    </p>
 
-</body>
-
+    <div class="container1">
+      <div style="align-self: center">1</div>
+      <div>2</div>
+      <div style="align-self: center">3</div>
+      <div>1</div>
+      <div style="align-self: start">2</div>
+      <div>3</div>
+    </div>
+  </body>
 </html>
+
+
+
+
+<!--  -->

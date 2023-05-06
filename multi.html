@@ -3,13 +3,12 @@
 <head>
   <style>
 /*     
-     Proirity of style 
+     Proirity of style  => Inline style => ID => atrribute => elements 
 
     Inline styles - Example: <h1 style="color: pink;">
     IDs - Example: #navbar Classes,pseudo-classes,
     attribute selectors - Example: .test,:hover,[href] 
     Elements and pseudo-elements - Example: h1, */
-
 
 
     :before .test {
@@ -27,12 +26,18 @@
     p {
       color: red;
     }
+
+    .test{
+      color: black;
+    }
+
   </style>
 </head>
 
 <body>
 
-  <p id="demo" class="test">Hello World!</p>
+  <p id="demo" class="test " style="color:brown">Hello World! form inline style</p>
+  <p id="demo" class="test ">Hello World!</p>
   <p class="test" id="demo1">Hello joy </p>
 
   </a>
