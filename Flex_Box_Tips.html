@@ -8,6 +8,7 @@
     <title>Tips</title>
 
     <style>
+        /* box-sizing use korle padding margin sob div width er moddhe include hoye jai ajonno effect pore nah baire  */
         * {
             box-sizing: border-box;
         }
@@ -68,17 +69,18 @@
 
         .column {
             display: flex;
+            /* height: 500px; */
             text-align: center;
             flex-wrap: wrap;
             background-color: burlywood;
-            border: 3px solid black;
+            border: 5px solid red;
         }
 
         .column>* {
             border: 3px solid blue;
-            flex-grow: 1;
+            /* flex-grow: 1; */
             height: 50px;
-            flex-basis: 30%;
+            flex-basis: 33.33%;
         }
 
         @media only screen and (max-width: 500px) {
@@ -128,6 +130,7 @@
         <div class="col">4</div>
         <div class="col">5</div>
     </div>
+
 </body>
 
 </html>

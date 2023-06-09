@@ -2,9 +2,11 @@
 
 <!-- 
 
-*** Flexbox a justify-items / justify-self nai eitar bodole margin:auto use kore . 
+* Flexbox a justify-items / justify-self nai eitar bodole margin:auto use kore . 
 
-*** justify content / align content  jkn 2 ta row thakbe tkn kaj korbe .. kintu jodi akta row te kaj koraity cai tahole amake flex-wrap : wrap use korty hobe .
+* align content jkn 2 ta row thakbe tkn kaj korbe .. kintu jodi akta row te kaj koraity cai tahole amake flex-wrap : wrap use korty hobe .
+
+* align items abr single row niye kaj kore . karon ak akta row e ak akta item align er jonno .
 
 flex-direction => container er kon dike div/child gula ke rakhbe ba spand korbe like x axis naki y axis 
 
@@ -14,9 +16,9 @@ flex-direction => column , jodi hoi tahole flex item gula upr theke nice ( top t
 
 flex-direction => row , jodi hoi tahole flex item gula left theke right ( left to right ) stack hoi kintu jodi warp on thake r new item er jaiga faka nah thake tkn abr new row a left theke assign suru kore . 
 
-flex-direction => row-reverse thakle flex  item  gula right thke left  a assign / stack hoi  kintu jodi warp on thake r new item er jaiga faka  nah thake tkn abr new row te  right theke assign suru kore .
+*flex-direction => row-reverse thakle flex  item  gula right thke left  a assign / stack hoi  kintu jodi warp on thake r new item er jaiga faka  nah thake tkn abr new row te  right theke assign suru kore .
 
-flex-direction => column-reverse thakle flex  item  gula top to bottom a assign / stack hoi  kintu jodi warp on thake r new item er jaiga faka  nah thake tkn abr new column a top theke assign suru kore .
+*flex-direction => column-reverse thakle flex  item  gula top to bottom a assign / stack hoi  kintu jodi warp on thake r new item er jaiga faka  nah thake tkn abr new column a top theke assign suru kore .
 
 flex-wrap  => wrap nah dile div gula caipe ak row te fit hoye jai . kintu wrap dile nijeder size niye set kore then display soto boro hole warp kore 
 
@@ -30,7 +32,7 @@ align-content => container er property , Sob gula div ke akbar a dore vartically
 
 songe content thaklei bujhba oita container er jonno , r item tka mane akta specific item er jonno 
 
-justify sob somoi main axis ( x axis ) borabor kaj kore kintu align sob somoi cross axis  ( y axis ) borabor kaj kore . 
+*justify sob somoi main axis ( x axis ) borabor kaj kore kintu align sob somoi cross axis  ( y axis ) borabor kaj kore . 
 
 jkn amra flex-direction: row dei tkn row borabor items gula assign hoi . that means main axis ( x axis ) borabor. ( → this way )
 akn ami jodi justify use kori tahole eita left-right ( main axis => x axis ) borabor format korbe r align use korle eita top-bottom ( cross axis => y axis ) borabor format korbe. 
@@ -39,7 +41,7 @@ But jodi amra flex-direction: column dei tkn column borabor items gula assign ho
 akn ami jodi justify use kori tahole eita top-bottom ( cross axis =>  y axis )  borabor format korbe r align use korle eita left-right ( main axis => x axis  ) borabor format korbe . that means 
 jodi ami flex-direction: column use kori tahole justify hoye jabe align r align hoye jabe justify . 
 
--->
+--> 
 
 
 
@@ -97,7 +99,7 @@ jodi ami flex-direction: column use kori tahole justify hoye jabe align r align 
         /* justify-content: flex-start; */
         /* justify-content: flex-end; */
 
-        /* flex-derection:column dile y axix r row dile by default er moto x axis */
+        /* flex-derection:column dile main axis holo y axix r row dile by default er moto main axis x axis */
         /* flex-direction: column-reverse; */
         /* flex-direction:column; */
 
@@ -139,6 +141,7 @@ jodi ami flex-direction: column use kori tahole justify hoye jabe align r align 
         justify-content: flex-end;
         background-color: cyan;
       }
+
       .flex_direction_row > div {
         background-color: #f1f1f1;
         width: 100px;
@@ -187,15 +190,17 @@ jodi ami flex-direction: column use kori tahole justify hoye jabe align r align 
 
 
 
-<!--           This one is Very Very Important For flexbox modeling  
+<!--!           This one is Very Very Important For flexbox modeling  
 
   justify sob somoi main axis ( x axis ) borabor kaj kore kintu align sob somoi cross axis  ( y axis ) borabor kaj kore . 
   jkn amra flex-direction: row dei tkn row borabor items gula assign hoi . that means main axis ( x axis ) borabor. ( → this way )
   akn ami jodi justify use kori tahole eita left-right ( main axis => x axis ) borabor format korbe r align use korle eita top-bottom ( cross axis => y axis ) borabor format korbe. 
 
-  but jodi amra flex-direction: column dei tkn column borabor items gula assign hoi . that means main cross axis borabor. ( ↓ this way )
+  But jodi amra flex-direction: column dei tkn column borabor items gula assign hoi . that means cross axis borabor. ( ↓ this way )
   akn ami jodi justify use kori tahole eita top-bottom ( cross axis =>  y axis )  borabor format korbe r align use korle eita left-right ( main axis => x axis  ) borabor format korbe . that means 
   jodi ami flex-direction: column use kori tahole justify hoye jabe align r align hoye jabe justify . 
+  Which is expected behavior . cz justify sob somoi main axis borabor format korbe r align sob somoi cross axis borabor format kore . column a jehetu main axis y axis borabor ajonnoi top to bottom format korbe 
+  r cross axis jehetu x axis borabor ajonnoi align left to right format korbe .
 
 -->
 
