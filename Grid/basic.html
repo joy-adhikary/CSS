@@ -1,21 +1,24 @@
 <html>
 
+<!-- Grid-auto-flow: column/ row . basically flexbox a jmn flex-direction ei jaigai tmn grid-auto-flow . -->
+
+<!-- Grid-auto-flow: column dense => Places items by filling each column, and fill any holes in the grid -->
+
 
 <!-- 
 
-          flexbox e align-items a ak akta row ke , ak akta item hisabe dore jmn ei example a flexbox a item sonkha 2 ta but grid a 12 ta 
-          1  2  3 4  5  6       => item 1 
-          7  8  9 10 11 12      => item 2 
-          kintu grid a ak akta element itself ak akta item .So  
-          grid a align-items / justify-items mane holo element gula oi box er majhe kivabe move korbe.akta element er oi box tuku e or moving space 
-
-
-
-        -->
+    flexbox e align-items a ak akta row ke , ak akta item hisabe dore jmn ei example a flexbox a item sonkha 2 ta but grid a 12 ta     
+    1  2  3 4  5  6       => item 1 
+    7  8  9 10 11 12      => item 2 
+    kintu grid a ak akta element itself ak akta item .
+    So grid a align-items / justify-items mane holo element gula oi box er majhe kivabe move korbe.akta element er oi box tuku e or moving space 
+    
+-->
 
 <!-- 
     Grid a align-items / justify-items by default stretch thake . 
- -->
+-->
+
 <head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
@@ -38,7 +41,7 @@
             /* grid-template-colums er mane holo kto gula columns thakbe.. ei jaigai repeat er 1st parameter holo kto bar thakbe , 2nd ta holo kto fraction kore thakbe  */
             grid-template-columns: repeat(5, 90px);
             /* grid-template-rows er mane holo kto gula rows thakbe.. ei jaigai repeat er 1st parameter holo kto gula row thakbe , 2nd ta holo kto fraction ( vag akare ) kore thakbe  */
-            grid-template-rows: repeat((3, 90px));
+            grid-template-rows: repeat(3, 90px);
             /* conatiner er majhe box gula ke horaizontally kivabe thkbe seita thik kore dei justify-content */
             justify-content: center;
             /* align-content: center; */
@@ -81,10 +84,33 @@
         }
 
         .one {
-            grid-row: 1/3;
+            /* row line 1 theke suru hoye row line 2 pojontho jabe  */
+            grid-row: 1/2;
+            grid-column: 1/4;
             /* grid-column: 1/-1; */
-            grid-column: 1/6;
+            /* grid-column: 1/6; */
             /* 1/-1 and  1/6 both are same .Both one basically pointing to the end column number*/
+        }
+
+        .six {
+
+            /*grid-area is the sort hand of  grid-row-start, grid-column-start, grid-row-end and the grid-column-end */
+            /* ei 3 tai same kaj korbe  */
+            grid-area: 2/3/2/6;
+            /* grid-area: 2/3/span 1 / span 3; */
+            /* grid-area: 2/3/2/-1 ; */
+        }
+
+        @media only screen and (max-width: 500px) {
+
+            /* jodi amn hoi je amr device er upr depend kore div er position change korte hobe tkn ami just eivabe starting and ending position bole dite pari  */
+            /* akta single item er  */
+
+            .six {
+                grid-area: 2/3/4/3;
+                /* if we want we can skip any position value  */
+                /* grid-area: 2/3/4; */
+            }
         }
     </style>
 
@@ -102,7 +128,7 @@
         <div>3</div>
         <div>4</div>
         <div>5</div>
-        <div>6</div>
+        <div class="six">6</div>
         <div>7</div>
         <div>8</div>
         <div>9</div>
