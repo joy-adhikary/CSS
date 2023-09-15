@@ -1,17 +1,31 @@
 
-most of the time use 
+/* most of the time use  */
 
 element.class	p.intro	Selects all <p> elements with class="intro"
 
 element,element	div, p	Selects all <div> elements and all <p> elements
 
-element element	div p	Selects all <p> elements inside <div> elements
+element element	div p	Selects all <p> elements inside <div> elements ( see line 18 for example )
 
 .class element .joy h4 selects all h4 elemetns inside class joy.
 
 element>element	div > p	Selects all <p> elements where the parent is a <div> element
 
+:nth-child(n)	p:nth-child(2)	Selects every <p> element that is the second child of its parent
 
+
+/* 
+ 1st a div a dukhbe then p te 
+
+        div {
+                p {
+
+                    nesting continuing ...
+                       
+                  }
+            }
+
+*/
 
 
 
